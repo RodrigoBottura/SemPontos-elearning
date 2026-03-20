@@ -493,11 +493,9 @@
             border-radius: 12px; padding: 20px;
             margin-bottom: 20px;
         }
-        .confidence-item {
-            margin-bottom: 18px; padding-bottom: 18px;
-            border-bottom: 1px solid #eee;
+        .confidence-inline {
+            margin-top: 16px;
         }
-        .confidence-item:last-child { border-bottom: none; }
         .confidence-label {
             font-size: 13px; font-weight: 600;
             color: #1a1a1a; margin-bottom: 10px;
@@ -690,8 +688,13 @@
     <div class="app-container">
         <!-- Top Bar -->
         <div id="top-bar">
-            <div class="top-bar-left">
-                <span>SEM PONTOS CEGOS</span>
+            <div class="top-bar-left" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.16 114.38" height="28" style="flex-shrink:0;">
+                    <path fill="#4DF600" d="M80.95,49.16c13.59,12.49,27.32,24.83,41.01,37.21,1.71-2.52,3.25-5.17,4.59-7.93-13.23-12.52-26.84-24.66-40.54-36.67-11.31-9.92-21.92-9.62-33.1.41-13.3,11.93-26.23,24.3-39.81,35.89,1.34,2.82,2.89,5.52,4.62,8.09,13.73-12.39,27.46-24.78,41.13-37.24,7.59-6.92,14.41-6.83,22.12.25Z"/>
+                    <path fill="#4DF600" d="M56.92,20.51c8.24-4.87,16.3-5.35,24.64-.48,12.87,7.52,25.76,15,38.67,22.46,4.05,2.34,8.15,4.59,12.57,7.06-.09-3.94-.55-7.79-1.33-11.52-.69-.56-31.47-18.24-45.95-26.61-9.9-5.72-20.15-6.3-30.13-.8-14.57,8.03-46.01,26.35-47,27.22-.8,3.73-1.27,7.59-1.37,11.53.28-.12.54-.24.79-.38,16.39-9.47,32.83-18.86,49.13-28.49Z"/>
+                    <path fill="#4DF600" d="M81.84,70.14c-6.01-8.23-19.13-8.13-24.57.09-7.27,10.97-14.02,22.3-21.15,33.89,2.58,1.64,5.28,3.1,8.09,4.36,1.2-1.51,14.61-23.59,19.71-31.88,3.28-5.34,8.32-5.41,11.49-.17,5.3,8.75,18.72,30.78,19.74,32.23,2.83-1.24,5.55-2.69,8.15-4.32-1.85-3.03-3.69-6.06-5.56-9.05-5.24-8.42-10.06-17.16-15.89-25.15Z"/>
+                </svg>
+                Sem Pontos Cegos
             </div>
             <div class="top-bar-center">
                 <div id="screenCounter">Tela 1 de 15</div>
@@ -736,12 +739,12 @@
                     <div class="objective-card">
                         <div class="objective-card-icon">🧪</div>
                         <h3>Analisar como a cultura mitiga ou reforça os vieses</h3>
-                        <p>Cultura não é decoração — é um mecanismo ativo de viés.</p>
+                        <p>A cultura organizacional influencia os viéses.</p>
                     </div>
                     <div class="objective-card">
                         <div class="objective-card-icon">🛡️</div>
-                        <h3>Avaliar o papel da segurança psicológica em equipes conscientes de vieses</h3>
-                        <p>Aprenda o que realmente funciona para construir equipes melhores.</p>
+                        <h3>Avaliar o papel da segurança psicológica no trabalho em equipe</h3>
+                        <p>Aprenda o que realmente funciona para construir equipes mais conscientes.</p>
                     </div>
                 </div>
             </div>
@@ -847,13 +850,13 @@
                             <div>
                                 <div style="font-size: 20px; margin-bottom: 4px;">🧠</div>
                                 <div class="mini-card-title">Fadiga de Decisão</div>
-                                <div class="mini-card-subtitle">Qualidade declinante de decisões após tomada estendida.</div>
+                                <div class="mini-card-subtitle">A qualidade das decisões cai após um logo período de escolhas consecutivas.</div>
                             </div>
                             <div class="mini-card-chevron">▼</div>
                         </div>
                         <div class="mini-card-body">
-                            <div class="mini-card-content">Líderes esgotam força de vontade mais rápido do que percebem. Decisões às 17h têm menor qualidade que decisões às 9h. Juízes aprovam parole com mais frequência após o almoço.</div>
-                            <div class="mini-card-antidote">💊 Reserve decisões importantes para o início do dia. Reduza decisões triviais com padrões e políticas.</div>
+                            <div class="mini-card-content">Líderes se esgotam mais rápido do que percebem. Decisões às 17h têm menor qualidade que decisões às 9h. Juízes aprovam liberdade condicional (parole) com mais frequência após o almoço.</div>
+                            <div class="mini-card-antidote">💊 Reserve decisões importantes para o início do dia. Reduza decisões triviais com padrões e políticas operacionais.</div>
                         </div>
                     </div>
                     <div class="mini-card" onclick="toggleCard04(1)">
@@ -874,14 +877,14 @@
                         <div class="mini-card-header">
                             <div>
                                 <div style="font-size: 20px; margin-bottom: 4px;">🔍</div>
-                                <div class="mini-card-title">Escassez e Tunelamento</div>
-                                <div class="mini-card-subtitle">Restrições de recursos criam visão de túnel cognitiva.</div>
+                                <div class="mini-card-title">Escassez e Tunelamento (túnel da escassez)</div>
+                                <div class="mini-card-subtitle">A falta extrema de recursos reduz o foco e a capacidade de tomada de decisão.</div>
                             </div>
                             <div class="mini-card-chevron">▼</div>
                         </div>
                         <div class="mini-card-body">
                             <div class="mini-card-content">Quando recursos são escassos (tempo, dinheiro, atenção), focamos na crise imediata e ignoramos o quadro maior. Líderes em modo de 'apagar incêndios' tomam decisões progressivamente piores.</div>
-                            <div class="mini-card-antidote">💊 Contexto brasileiro: líderes em organizações com recursos limitados são especialmente expostos. Crie rituais de distância estratégica — reuniões mensais fora da operação.</div>
+                            <div class="mini-card-antidote">💊 Contexto brasileiro: líderes em organizações com recursos limitados estão especialmente expostos. Crie rituais de distância estratégica e reuniões mensais fora do contexto da operação.</div>
                         </div>
                     </div>
                 </div>
@@ -889,7 +892,7 @@
 
             <!-- Screen 5: Psychological Safety Pyramid -->
             <div class="screen">
-                <h2 class="section-header">A Base para Equipes à Prova de Vieses</h2>
+                <h2 class="section-header">A Base para Equipes se Protegerem dos Vieses</h2>
                 <div class="pyramid-container">
                     <div class="pyramid-def">
                         <strong>Segurança Psicológica</strong> é a crença compartilhada de que a equipe é segura para assumir riscos interpessoais — falar, desafiar, admitir erros. <em>(Amy Edmondson, Harvard)</em>
@@ -938,7 +941,13 @@
             <!-- Screen 7: Pressure Point Simulation - Part 2 -->
             <div class="screen">
                 <h2 class="section-header">🎬 A Reunião — Observe com Atenção</h2>
-                <p style="font-size: 14px; color: #555; margin-bottom: 16px;">Leia a transcrição. Note quem fala, quem é silenciado, e como a posição do grupo evolui.</p>
+                <p style="font-size: 14px; color: #555; margin-bottom: 16px;">Assista ao vídeo e leia a transcrição. Note quem fala, quem é silenciado, e como a posição do grupo evolui.</p>
+                <div style="margin-bottom: 20px; border-radius: 10px; overflow: hidden; background: #000; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+                    <video controls style="width: 100%; display: block; max-height: 320px;" preload="metadata">
+                        <source src="assets/Sem título.mp4" type="video/mp4">
+                        <p style="color: #fff; padding: 16px; text-align: center;">Seu navegador não suporta reprodução de vídeo HTML5.</p>
+                    </video>
+                </div>
                 <div class="meeting-transcript">
                     <div class="meeting-line">
                         <span class="meeting-time">[14h03]</span>
@@ -1066,7 +1075,7 @@
                     <h3>Avalie Sua Equipe</h3>
                     <p>A Auditoria de Normas Organizacionais na Seção 4B do seu diário contém 15 indicadores de cultura que reforça vieses. Avalie sua equipe honestamente — não como ela deveria ser, mas como ela é.</p>
                     <div class="diary-note">Esta atividade se conecta à Simulação do Ponto de Pressão que você acabou de completar.</div>
-                    <a href="#" class="diary-cta">📥 Acesse o Diário de Aprendizagem para completar esta atividade</a>
+                    <a href="assets/diario-de-aprendizagem.pdf" target="_blank" class="diary-cta">📥 Acesse o Diário de Aprendizagem para completar esta atividade</a>
                 </div>
             </div>
 
@@ -1076,7 +1085,7 @@
                 <div class="diary-card">
                     <h3>Avalie a Segurança Psicológica da Sua Equipe</h3>
                     <p>Use a avaliação de 10 itens na Seção 4C do seu diário para avaliar as condições atuais de segurança da sua equipe. Use-a honestamente, não como aspiração.</p>
-                    <a href="#" class="diary-cta">📥 Acesse o Diário de Aprendizagem para completar esta atividade</a>
+                    <a href="assets/diario-de-aprendizagem.pdf" target="_blank" class="diary-cta">📥 Acesse o Diário de Aprendizagem para completar esta atividade</a>
                 </div>
             </div>
 
@@ -1162,7 +1171,7 @@
                 <div class="summary-bridge">
                     <strong>No próximo módulo:</strong> como construir sistemas e processos que reduzem vieses nas organizações.
                 </div>
-                <button class="btn btn-primary" style="align-self: center; margin-top: 16px;" onclick="window.location.href='modulo-05.html'">
+                <button class="btn btn-primary" style="align-self: center; margin-top: 16px;" onclick="try{localStorage.setItem('spc_m4_complete','true');}catch(e){}window.location.href='modulo-05.html'">
                     Continuar para o Módulo 5 →
                 </button>
             </div>
@@ -1298,7 +1307,8 @@
                 updateTopBar();
                 updateBottomNav();
                 updateNextButton();
-                window.scrollTo(0, 0);
+                const sc = document.getElementById('screens-container');
+                if (sc) sc.scrollTop = 0;
 
                 // Special handling for specific screens
                 if (index === 6) renderDecisionPhase();
@@ -1420,81 +1430,84 @@
                 'rejeitar': 'Rejeitar'
             };
 
-            document.getElementById('debrief-initial-emoji').textContent = emojiMap[pressaoChoice1] || '—';
+            document.getElementById('debrief-initial').textContent = emojiMap[pressaoChoice1] || '—';
             document.getElementById('debrief-initial-text').textContent = textMap[pressaoChoice1] || '—';
         }
 
-        function renderDecisionPhase() {
-            if (currentScreen !== 9 || decisionPhase !== 'deciding') return;
+        // Sequential decision-then-confidence flow
+        let activeDecisionIdx = 0; // which decision we are currently on
 
-            let html = '';
-            for (let d = 0; d < 5; d++) {
-                const q = decisionQuestions[d];
-                html += `
-                    <div class="decision-card">
-                        <div class="decision-progress">Decisão ${d + 1} de 5</div>
-                        <div class="decision-scenario">${q.scenario}</div>
-                        <div class="decision-options">
-                `;
-                q.options.forEach((opt, i) => {
-                    html += `<div class="decision-option" onclick="selectDecision(${d}, ${i});">${opt}</div>`;
-                });
-                html += `</div></div>`;
+        function renderDecisionPhase() {
+            if (currentScreen !== 9) return;
+            activeDecisionIdx = decisionAnswers.filter(a => a !== undefined).length;
+            if (activeDecisionIdx >= 5) { checkDecisionsComplete(); return; }
+            showDecisionStep(activeDecisionIdx);
+        }
+
+        function showDecisionStep(d) {
+            const q = decisionQuestions[d];
+            let html = `<div class="decision-card">
+                <div class="decision-progress">Decisão ${d + 1} de 5</div>
+                <div class="decision-scenario">${q.scenario}</div>
+                <div class="decision-options" id="dopts-${d}">`;
+            q.options.forEach((opt, i) => {
+                html += `<div class="decision-option" id="dopt-${d}-${i}" onclick="selectDecision(${d}, ${i});">${opt}</div>`;
+            });
+            html += `</div>
+                <div class="confidence-inline" id="conf-inline-${d}" style="display:none; margin-top:18px; padding: 14px; background: #f0fff4; border-radius: 8px; border-left: 4px solid var(--accent);">
+                    <div style="font-size:13px; font-weight:700; color: var(--accent); margin-bottom:10px;">Avalie sua confiança nessa decisão (1 = muito incerto · 5 = muito confiante):</div>
+                    <div class="confidence-buttons" id="cbtns-${d}">`;
+            for (let i = 1; i <= 5; i++) {
+                html += `<button class="confidence-btn" onclick="setConfidence(${d}, ${i});">${i}</button>`;
             }
+            html += `</div></div></div>`;
             document.getElementById('decision-phase').innerHTML = html;
+            document.getElementById('confidence-phase').style.display = 'none';
+            document.getElementById('decision-summary').style.display = 'none';
         }
 
         function selectDecision(d, optionIndex) {
+            if (decisionAnswers[d] !== undefined) return; // already answered
             decisionAnswers[d] = optionIndex;
 
-            // Highlight selected
-            const cards = document.querySelectorAll('.decision-card');
-            const options = cards[d].querySelectorAll('.decision-option');
-            options.forEach((o, i) => {
+            // Lock options and highlight selection
+            const opts = document.getElementById('dopts-' + d).querySelectorAll('.decision-option');
+            opts.forEach((o, i) => {
+                o.style.pointerEvents = 'none';
                 o.classList.toggle('selected', i === optionIndex);
             });
 
-            // Check if all answered
-            if (decisionAnswers.length === 5 && decisionAnswers.every(a => a !== undefined)) {
-                moveToConfidencePhase();
-            }
-        }
-
-        function moveToConfidencePhase() {
-            decisionPhase = 'rating';
-            document.getElementById('decision-phase').style.display = 'none';
-            let html = `<div class="confidence-section"><h3 style="margin-bottom: 16px;">Agora avalie sua confiança em cada decisão</h3>`;
-            for (let d = 0; d < 5; d++) {
-                html += `<div class="confidence-item">
-                    <div class="confidence-label">Decisão ${d + 1} — ${decisionQuestions[d].scenario.substring(0, 50)}...</div>
-                    <div class="confidence-buttons">
-                `;
-                for (let i = 1; i <= 5; i++) {
-                    html += `<button class="confidence-btn" onclick="setConfidence(${d}, ${i});">${i}</button>`;
-                }
-                html += `</div></div>`;
-            }
-            html += `</div>`;
-            document.getElementById('confidence-phase').innerHTML = html;
-            document.getElementById('confidence-phase').style.display = 'block';
+            // Show inline confidence rating
+            document.getElementById('conf-inline-' + d).style.display = 'block';
+            // Scroll so the confidence panel is visible
+            setTimeout(() => {
+                const el = document.getElementById('conf-inline-' + d);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
         }
 
         function setConfidence(d, val) {
             decisionConfidence[d] = val;
-            const buttons = document.querySelectorAll('.confidence-item')[d].querySelectorAll('.confidence-btn');
+            const buttons = document.getElementById('cbtns-' + d).querySelectorAll('.confidence-btn');
             buttons.forEach((b, i) => {
                 b.classList.toggle('selected', i + 1 === val);
+                b.disabled = true;
             });
 
-            // Check if all rated
-            if (decisionConfidence.length === 5 && decisionConfidence.every(c => c !== undefined)) {
-                checkDecisionsComplete();
-            }
+            // Move to next decision or finish
+            setTimeout(() => {
+                if (d < 4) {
+                    activeDecisionIdx = d + 1;
+                    showDecisionStep(activeDecisionIdx);
+                } else {
+                    checkDecisionsComplete();
+                }
+            }, 600);
         }
 
         function checkDecisionsComplete() {
             screenRequirements[9] = true;
-            document.getElementById('confidence-phase').style.display = 'none';
+            document.getElementById('decision-phase').style.display = 'none';
             document.getElementById('decision-summary').style.display = 'block';
             updateNextButton();
         }

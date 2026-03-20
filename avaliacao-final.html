@@ -107,9 +107,12 @@
         .intro-note { background: white; border-radius: 8px; padding: 16px; font-size: 14px; color: #555; line-height: 1.7; }
 
         /* Scenario screens */
-        .scenario-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 14px 18px; background: var(--deep-green); color: white; border-radius: 8px; }
+        .scenario-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; padding: 14px 18px; background: var(--deep-green); color: white; border-radius: 8px; }
         .scenario-header .scenario-num { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--neon-green); }
         .scenario-header h2 { font-size: 18px; font-weight: 700; color: white; }
+        .scenario-imgs { display: flex; gap: 10px; margin-left: auto; flex-shrink: 0; }
+        .scenario-imgs img { height: 56px; width: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-green); background: #fff; }
+        @media (max-width: 480px) { .scenario-imgs img { height: 40px; width: 40px; } }
         .scenario-body { background: white; border-radius: 10px; padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--accent); }
         .scenario-body h3 { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
         .scenario-body p { font-size: 14px; color: #333; line-height: 1.8; margin-bottom: 10px; }
@@ -211,9 +214,10 @@
     <!-- Top Bar -->
     <div id="top-bar">
         <div class="top-bar-left" onclick="goHome()">
-            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                <path d="M8 28 L20 12 L32 28" fill="none" stroke="#4DF600" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 28 L20 16 L28 28" fill="none" stroke="#4DF600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.16 114.38" height="28" style="flex-shrink:0;">
+                <path fill="#4DF600" d="M80.95,49.16c13.59,12.49,27.32,24.83,41.01,37.21,1.71-2.52,3.25-5.17,4.59-7.93-13.23-12.52-26.84-24.66-40.54-36.67-11.31-9.92-21.92-9.62-33.1.41-13.3,11.93-26.23,24.3-39.81,35.89,1.34,2.82,2.89,5.52,4.62,8.09,13.73-12.39,27.46-24.78,41.13-37.24,7.59-6.92,14.41-6.83,22.12.25Z"/>
+                <path fill="#4DF600" d="M56.92,20.51c8.24-4.87,16.3-5.35,24.64-.48,12.87,7.52,25.76,15,38.67,22.46,4.05,2.34,8.15,4.59,12.57,7.06-.09-3.94-.55-7.79-1.33-11.52-.69-.56-31.47-18.24-45.95-26.61-9.9-5.72-20.15-6.3-30.13-.8-14.57,8.03-46.01,26.35-47,27.22-.8,3.73-1.27,7.59-1.37,11.53.28-.12.54-.24.79-.38,16.39-9.47,32.83-18.86,49.13-28.49Z"/>
+                <path fill="#4DF600" d="M81.84,70.14c-6.01-8.23-19.13-8.13-24.57.09-7.27,10.97-14.02,22.3-21.15,33.89,2.58,1.64,5.28,3.1,8.09,4.36,1.2-1.51,14.61-23.59,19.71-31.88,3.28-5.34,8.32-5.41,11.49-.17,5.3,8.75,18.72,30.78,19.74,32.23,2.83-1.24,5.55-2.69,8.15-4.32-1.85-3.03-3.69-6.06-5.56-9.05-5.24-8.42-10.06-17.16-15.89-25.15Z"/>
             </svg>
             Sem Pontos Cegos
         </div>
@@ -230,9 +234,9 @@
         <!-- Screen 0: FA-00 Introduction -->
         <div class="screen active" id="screen-0">
             <div class="intro-banner">
-                <h1>Aplicando Sua Clareza</h1>
+                <h1>Aplicando Seu Conhecimento</h1>
                 <p style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--neon-green);">Avaliação Final</p>
-                <p>Três cenários reais de liderança — 15 questões aplicadas</p>
+                <p>Três cenários reais de liderança, 15 questões</p>
                 <div class="intro-stats">
                     <div class="intro-stat">
                         <div class="stat-num">15</div>
@@ -249,8 +253,8 @@
                 </div>
             </div>
             <div class="intro-note">
-                <p><strong>Como funciona:</strong> Você vai ler três cenários narrativos de liderança e responder 5 questões por cenário. As questões testam sua capacidade de identificar vieses, prever consequências e escolher estratégias de mitigação.</p>
-                <p style="margin-top: 10px;"><strong>Regras:</strong> Totalmente auto-ritmado. Sem limite de tempo. Você pode refazer a avaliação após revisar os módulos indicados. Leia cada cenário com cuidado antes de responder.</p>
+                <p><strong>Como funciona:</strong> Você vai ler três cenários de liderança e responder 5 questões por cenário. As questões testam sua capacidade de identificar vieses, prever consequências e escolher estratégias de mitigação.</p>
+                <p style="margin-top: 10px;"><strong>Regras:</strong> Sem limite de tempo. Você pode refazer a avaliação após revisar os módulos indicados. Leia cada cenário com cuidado antes de responder.</p>
                 <p style="margin-top: 10px; color: var(--accent); font-weight: 600;">Nota de aprovação: 70% — 11 ou mais questões corretas de 15.</p>
             </div>
         </div>
@@ -262,18 +266,22 @@
                     <div class="scenario-num">Cenário 1 de 3</div>
                     <h2>O Painel de Seleção</h2>
                 </div>
+                <div class="scenario-imgs">
+                    <img src="assets/Renato.png" alt="Renato Souza" title="Renato Souza">
+                    <img src="assets/Beatriz.png" alt="Beatriz Novais" title="Beatriz Novais">
+                </div>
             </div>
             <div class="scenario-body">
                 <h3>Contexto</h3>
                 <p>A Vebraco Industrial, empresa de médio porte do setor de manufatura em Campinas, está selecionando um novo Diretor de Operações. O processo foi delegado a um comitê de cinco pessoas: a CEO Fernanda Lins, o CFO Marco Augusto, a VP de RH Cláudia Torres, o Diretor Comercial Roberto Menezes e um consultor externo de RH.</p>
                 <p>Desde o início, Fernanda demonstrou forte preferência por Renato Souza, o primeiro candidato a ser entrevistado. Renato é carismático, frequentou a mesma pós-graduação que a CEO, e tem histórico de resultados em uma empresa menor. Sua apresentação foi energizante.</p>
                 <p>Ao longo de três semanas e doze entrevistas, o campo se estreita. Uma candidata, Beatriz Novais, tem histórico operacional mais consistente, referências impecáveis de empresas de escala comparável, e resultados quantitativos superiores nos testes técnicos. Mas é percebida como "menos dinâmica" pelos membros do comitê que entrevistaram Renato primeiro.</p>
-                <p>Na reunião final de calibração, Fernanda abre com: "Sinto que Renato tem o que a empresa precisa neste momento. Suas energias?" O CFO e o Diretor Comercial concordam rapidamente. A VP de RH esboça uma objeção — "e os dados do assessment técnico?" — mas recua quando a CEO reitera sua posição. O consultor externo anota algo e permanece em silêncio.</p>
+                <p>Na reunião final de calibração, Fernanda abre com: "Sinto que Renato tem o que a empresa precisa neste momento. Gostei da energia que ele traz." O CFO e o Diretor Comercial concordam rapidamente. A VP de RH esboça uma objeção: "e os dados do assessment técnico?" — mas recua quando a CEO reitera sua posição. O consultor externo anota algo e permanece em silêncio.</p>
                 <div class="context-detail">
-                    <strong>Resultado:</strong> Renato é selecionado. Seis meses depois, marcos operacionais críticos são perdidos. A VP de RH descobre que o consultor externo havia preparado uma análise comparativa mostrando Beatriz 40% à frente em critérios técnicos — mas não a compartilhou por não querer "contrariar o cliente".
+                    <strong>Resultado:</strong> Renato é selecionado. Seis meses depois, marcos operacionais críticos são perdidos. A VP de RH descobre que o consultor externo havia preparado uma análise comparativa mostrando Beatriz 40% à frente em critérios técnicos, mas não a compartilhou por não querer "contrariar o cliente".
                 </div>
                 <div class="bias-ref">
-                    <strong>Módulos relevantes:</strong> M1 (heurísticas), M2 (ancoragem, confirmação), M3 (halo, afinidade), M4 (autoridade, groupthink)
+                    <strong>Módulos relevantes:</strong> Módulos 1 à 4
                 </div>
             </div>
 
@@ -283,7 +291,7 @@
                 <div class="q-text">Qual é o viés mais diretamente responsável pelo fato de outros candidatos serem inconscientemente comparados com Renato ao longo do processo?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s1',1,'a',this)">A) Viés de Confirmação</button>
-                    <button class="q-option" onclick="answerQ('s1',1,'b',this)">B) Ancoragem — Renato se tornou a âncora de referência do processo</button>
+                    <button class="q-option" onclick="answerQ('s1',1,'b',this)">B) Ancoragem</button>
                     <button class="q-option" onclick="answerQ('s1',1,'c',this)">C) Efeito de Enquadramento</button>
                     <button class="q-option" onclick="answerQ('s1',1,'d',this)">D) Viés de Recência</button>
                 </div>
@@ -296,7 +304,7 @@
                 <div class="q-text">O fato de Fernanda e Renato terem frequentado a mesma pós-graduação provavelmente ativa qual viés na CEO?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s1',2,'a',this)">A) Viés de Status Quo</button>
-                    <button class="q-option" onclick="answerQ('s1',2,'b',this)">B) Efeito Halo combinado com Viés de Afinidade (endogrupo)</button>
+                    <button class="q-option" onclick="answerQ('s1',2,'b',this)">B) Efeito Halo + Viés de Afinidade (endogrupo)</button>
                     <button class="q-option" onclick="answerQ('s1',2,'c',this)">C) Aversão à Ambiguidade</button>
                     <button class="q-option" onclick="answerQ('s1',2,'d',this)">D) Viés de Representatividade</button>
                 </div>
@@ -310,7 +318,7 @@
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s1',3,'a',this)">A) Efeito de Enquadramento</button>
                     <button class="q-option" onclick="answerQ('s1',3,'b',this)">B) Reciprocidade Social</button>
-                    <button class="q-option" onclick="answerQ('s1',3,'c',this)">C) Viés de Autoridade suprimindo dissidência — combinado com Pensamento de Grupo</button>
+                    <button class="q-option" onclick="answerQ('s1',3,'c',this)">C) Viés de Autoridade + Pensamento de Grupo</button>
                     <button class="q-option" onclick="answerQ('s1',3,'d',this)">D) Viés de Recência</button>
                 </div>
                 <div class="q-feedback" id="s1-fb3"></div>
@@ -322,7 +330,7 @@
                 <div class="q-text">Qual intervenção estrutural, implementada ANTES das entrevistas, teria sido mais eficaz para prevenir a maioria dos vieses neste cenário?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s1',4,'a',this)">A) Cultivar Segurança Psicológica na reunião final</button>
-                    <button class="q-option" onclick="answerQ('s1',4,'b',this)">B) Rubrica de critérios pré-definidos e ponderados, avaliados independentemente antes da calibração coletiva</button>
+                    <button class="q-option" onclick="answerQ('s1',4,'b',this)">B) Rubrica de critérios pré-definidos</button>
                     <button class="q-option" onclick="answerQ('s1',4,'c',this)">C) Análise Pré-Mortem da decisão</button>
                     <button class="q-option" onclick="answerQ('s1',4,'d',this)">D) Reduzir o número de entrevistadores para 2</button>
                 </div>
@@ -334,10 +342,10 @@
                 <div class="q-label">Questão 5 de 5 — Ramificação</div>
                 <div class="q-text">Como consultor externo presente na reunião, você decide intervir. Qual abordagem é mais eficaz?</div>
                 <div class="q-options">
-                    <button class="q-option" onclick="branchQ('s1',5,'a',this)">A) Contradizer diretamente a CEO: "Fernanda, você está errada — Beatriz é claramente superior"</button>
-                    <button class="q-option" onclick="branchQ('s1',5,'b',this)">B) Compartilhar a análise comparativa: "Antes de concluir, eu gostaria de apresentar os dados do assessment — há um gap de 40% nos critérios técnicos que vale considerar"</button>
-                    <button class="q-option" onclick="branchQ('s1',5,'c',this)">C) Permanecer em silêncio para não comprometer o relacionamento com o cliente</button>
-                    <button class="q-option" onclick="branchQ('s1',5,'d',this)">D) Sugerir adiamento da decisão por 30 dias para "mais dados"</button>
+                    <button class="q-option" onclick="branchQ('s1',5,'a',this)">A) Contradizer diretamente a CEO</button>
+                    <button class="q-option" onclick="branchQ('s1',5,'b',this)">B) Compartilhar a análise comparativa</button>
+                    <button class="q-option" onclick="branchQ('s1',5,'c',this)">C) Permanecer em silêncio</button>
+                    <button class="q-option" onclick="branchQ('s1',5,'d',this)">D) Sugerir adiamento da decisão</button>
                 </div>
                 <div class="branch-result" id="s1-br5-a">
                     <strong>❌ Resultado:</strong> A intervenção direta confronta a CEO publicamente, ativa resistência defensiva e é descartada. O grupo fecha mais fortemente em torno de Renato. A Fernanda cancela o contrato de consultoria.
@@ -362,18 +370,21 @@
                     <div class="scenario-num">Cenário 2 de 3</div>
                     <h2>A Reunião Estratégica</h2>
                 </div>
+                <div class="scenario-imgs">
+                    <img src="assets/Consuma Brasil,.png" alt="Consuma Brasil" title="Consuma Brasil" style="border-radius: 8px; width: 80px; height: 56px;">
+                </div>
             </div>
             <div class="scenario-body">
                 <h3>Contexto</h3>
-                <p>A Consuma Brasil, empresa de bens de consumo com sede em São Paulo, enfrenta uma decisão difícil: encerrar sua linha de produtos "Natura Viva", que registra queda de volume de 18% ao ano por três anos consecutivos. A linha foi lançada há seis anos com grande fanfarra e R$45 milhões de investimento inicial.</p>
+                <p>A Consuma Brasil, empresa de bens de consumo com sede em São Paulo, enfrenta uma decisão difícil: encerrar sua linha de produtos "Natura Viva", que registra queda de volume de 18% ao ano por três anos consecutivos. A linha foi lançada há seis anos com grande animação e R$45 milhões de investimento inicial.</p>
                 <p>Na reunião estratégica, o CEO Paulo Drummond apresenta os dados. A linha perde dinheiro. A estrutura de custos é incompatível com o volume atual. A projeção indica déficit crescente. Três analistas externos recomendam encerramento.</p>
-                <p>No entanto, o VP de Marketing, Eduardo Fontes — que liderou o lançamento da linha — argumenta: "Não podemos jogar fora R$45 milhões. Demos apenas dois anos de verdadeiro suporte de marketing. Precisamos de mais um ciclo." O VP de Operações, Diana Rocha, adiciona: "Sempre fizemos assim — encerrar uma linha envia sinal errado ao mercado." O CFO Guilherme Assis anota os números em silêncio.</p>
+                <p>No entanto, o VP de Marketing, Eduardo Fontes, que liderou o lançamento da linha, argumenta: "Não podemos jogar fora R$45 milhões. Demos apenas dois anos de verdadeiro suporte de marketing. Precisamos de mais um ciclo." O VP de Operações, Diana Rocha, adiciona: "Sempre fizemos assim. Encerrar uma linha envia sinal errado ao mercado." O CFO Guilherme Assis anota os números em silêncio.</p>
                 <p>Quando Paulo pergunta se há consenso para encerrar, apenas o CFO levanta objeções técnicas. Os outros dois VPs concordam com Eduardo. Paulo, sentindo pressão para "defender o legado", adia a decisão: "Vamos dar mais um trimestre."</p>
                 <div class="context-detail">
-                    <strong>Resultado:</strong> Quatro trimestres depois, a linha foi encerrada de qualquer forma — com R$12 milhões adicionais de prejuízo acumulado. O CFO Guilherme havia calculado esse número na reunião original, mas não o compartilhou por considerar "desnecessariamente confrontador".
+                    <strong>Resultado:</strong> Quatro trimestres depois, a linha foi encerrada com R$12 milhões adicionais de prejuízo acumulado. O CFO Guilherme havia calculado esse número na reunião original, mas não o compartilhou por considerar "desnecessariamente confrontador".
                 </div>
                 <div class="bias-ref">
-                    <strong>Módulos relevantes:</strong> M2 (custo irrecuperável, status quo), M4 (groupthink, conformidade), M3 (efeito avestruz)
+                    <strong>Módulos relevantes:</strong> Módulo 2 ao Módulo 4
                 </div>
             </div>
 
@@ -382,8 +393,8 @@
                 <div class="q-label">Questão 1 de 5</div>
                 <div class="q-text">O argumento de Eduardo — "não podemos jogar fora R$45 milhões" — é a manifestação clássica de qual viés?</div>
                 <div class="q-options">
-                    <button class="q-option" onclick="answerQ('s2',1,'a',this)">A) Viés de Status Quo</button>
-                    <button class="q-option" onclick="answerQ('s2',1,'b',this)">B) Falácia do Custo Irrecuperável — o investimento passado não deveria influenciar decisões futuras</button>
+                    <button class="q-option" onclick="answerQ('s2',1,'a',this)">A) Viés de Afinidade (endogrupo)</button>
+                    <button class="q-option" onclick="answerQ('s2',1,'b',this)">B) Falácia do Custo Irrecuperável (o investimento passado não deveria influenciar decisões futuras)</button>
                     <button class="q-option" onclick="answerQ('s2',1,'c',this)">C) Ancoragem</button>
                     <button class="q-option" onclick="answerQ('s2',1,'d',this)">D) Excesso de Confiança</button>
                 </div>
@@ -396,7 +407,7 @@
                 <div class="q-text">Diana Rocha argumenta "sempre fizemos assim — encerrar uma linha envia sinal errado". Isso demonstra qual viés?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s2',2,'a',this)">A) Viés de Confirmação</button>
-                    <button class="q-option" onclick="answerQ('s2',2,'b',this)">B) Viés de Status Quo — preferência pela continuidade sobre mudança, independente dos dados</button>
+                    <button class="q-option" onclick="answerQ('s2',2,'b',this)">B) Viés de Status Quo</button>
                     <button class="q-option" onclick="answerQ('s2',2,'c',this)">C) Aversão ao Risco</button>
                     <button class="q-option" onclick="answerQ('s2',2,'d',this)">D) Efeito Halo</button>
                 </div>
@@ -408,7 +419,7 @@
                 <div class="q-label">Questão 3 de 5</div>
                 <div class="q-text">O CFO Guilherme tinha os dados que mostrariam o custo do adiamento, mas não os compartilhou. Qual viés ou dinâmica explica melhor esse silêncio?</div>
                 <div class="q-options">
-                    <button class="q-option" onclick="answerQ('s2',3,'a',this)">A) Efeito Avestruz — evitar informações negativas para não gerar conflito desconfortável</button>
+                    <button class="q-option" onclick="answerQ('s2',3,'a',this)">A) Efeito Avestruz</button>
                     <button class="q-option" onclick="answerQ('s2',3,'b',this)">B) Viés de Recência</button>
                     <button class="q-option" onclick="answerQ('s2',3,'c',this)">C) Aversão à Ambiguidade</button>
                     <button class="q-option" onclick="answerQ('s2',3,'d',this)">D) Falácia do Planejamento</button>
@@ -462,27 +473,30 @@
                     <div class="scenario-num">Cenário 3 de 3</div>
                     <h2>O Conflito de Equipe</h2>
                 </div>
+                <div class="scenario-imgs">
+                    <img src="assets/Marcos e Lara.png" alt="Marcos e Lara" title="Marcos e Lara" style="border-radius: 8px; width: 90px; height: 56px;">
+                </div>
             </div>
             <div class="scenario-body">
                 <h3>Contexto</h3>
                 <p>A TechNovus, startup de tecnologia em São Paulo com 80 colaboradores, tem um conflito crescente entre Marcos Viana (desenvolvedor sênior, 9 anos na empresa, produtor excepcional) e Lara Sousa (desenvolvedora júnior contratada há 8 meses, altamente talentosa, vinda de empresa internacional).</p>
                 <p>Marcos frequentemente interrompe Lara em reuniões, minimiza suas sugestões e, quando ela propõe uma arquitetura nova que o time aprova, comenta: "Isso já foi tentado. Não vai funcionar aqui." O gerente direto, Henrique Braga, observa o padrão há meses mas não intervém: "Marcos tem nove anos aqui e entrega sempre. Lara ainda está aprendendo como as coisas funcionam por aqui."</p>
-                <p>Uma segunda líder, a VP de Engenharia Tatiana Leal, ao ser informada do padrão, age diferente: ela agenda uma conversa separada com ambos, apresenta exemplos específicos de comportamento (sem julgamento), e cria uma norma de equipe sobre como sugestões técnicas são avaliadas — por mérito técnico, não por antiguidade. Em 60 dias, o clima muda visivelmente.</p>
+                <p>Uma segunda líder, a VP de Engenharia Tatiana Leal, ao ser informada do padrão, age diferente: ela agenda uma conversa separada com ambos, apresenta exemplos específicos de comportamento (sem julgamento), e cria uma norma de equipe sobre como sugestões técnicas são avaliadas — por mérito técnico, não por senioridade. Em 60 dias, o clima muda visivelmente.</p>
                 <div class="context-detail">
-                    <strong>Desfecho:</strong> Lara apresenta a nova arquitetura — que se torna a base do produto principal. Marcos, após a conversa com Tatiana, reconhece o padrão e se torna um dos maiores defensores de Lara. O time relata o melhor NPS interno da história da empresa.
+                    <strong>Desfecho:</strong> Lara apresenta a nova arquitetura, que se torna a base do produto principal. Marcos, após a conversa com Tatiana, reconhece o padrão e se torna um dos maiores defensores de Lara. O time relata o melhor NPS interno da história da empresa.
                 </div>
                 <div class="bias-ref">
-                    <strong>Módulos relevantes:</strong> M3 (excesso de confiança, endogrupo), M4 (normas sociais, segurança psicológica), M5 (estratégias culturais)
+                    <strong>Módulos relevantes:</strong> Módulo 3 ao Módulo 5
                 </div>
             </div>
 
             <!-- Q1 -->
             <div class="question-block" id="s3-q1">
                 <div class="q-label">Questão 1 de 5</div>
-                <div class="q-text">O comportamento de Marcos de minimizar sugestões de Lara com base em sua menor antiguidade é mais bem explicado por qual viés?</div>
+                <div class="q-text">O comportamento de Marcos de minimizar sugestões de Lara com base em seu menor tempo de empresa é mais bem explicado por qual viés?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s3',1,'a',this)">A) Ancoragem</button>
-                    <button class="q-option" onclick="answerQ('s3',1,'b',this)">B) Viés de Endogrupo/Afinidade combinado com Excesso de Confiança em seu próprio julgamento</button>
+                    <button class="q-option" onclick="answerQ('s3',1,'b',this)">B) Viés de Endogrupo</button>
                     <button class="q-option" onclick="answerQ('s3',1,'c',this)">C) Viés de Recência</button>
                     <button class="q-option" onclick="answerQ('s3',1,'d',this)">D) Efeito de Enquadramento</button>
                 </div>
@@ -494,7 +508,7 @@
                 <div class="q-label">Questão 2 de 5</div>
                 <div class="q-text">A inação de Henrique — "Marcos entrega sempre, Lara ainda está aprendendo" — exemplifica qual viés ou erro de avaliação?</div>
                 <div class="q-options">
-                    <button class="q-option" onclick="answerQ('s3',2,'a',this)">A) Efeito Halo (desempenho técnico de Marcos contaminando avaliação de seu comportamento interpessoal)</button>
+                    <button class="q-option" onclick="answerQ('s3',2,'a',this)">A) Efeito Halo (auréola)</button>
                     <button class="q-option" onclick="answerQ('s3',2,'b',this)">B) Aversão à Ambiguidade</button>
                     <button class="q-option" onclick="answerQ('s3',2,'c',this)">C) Viés de Confirmação</button>
                     <button class="q-option" onclick="answerQ('s3',2,'d',this)">D) Falácia do Custo Irrecuperável</button>
@@ -505,11 +519,11 @@
             <!-- Q3 -->
             <div class="question-block" id="s3-q3" style="display:none">
                 <div class="q-label">Questão 3 de 5</div>
-                <div class="q-text">A abordagem de Tatiana — conversa separada, exemplos específicos, norma baseada em mérito técnico — demonstra principalmente qual estratégia do M5?</div>
+                <div class="q-text">A abordagem de Tatiana — conversa separada, exemplos específicos, norma baseada em mérito técnico — demonstra principalmente qual estratégia do Módulo 5?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s3',3,'a',this)">A) Análise Pré-Mortem</button>
                     <button class="q-option" onclick="answerQ('s3',3,'b',this)">B) Visão Externa</button>
-                    <button class="q-option" onclick="answerQ('s3',3,'c',this)">C) Auxiliares de Decisão (rubrica de avaliação técnica) combinado com Normas Consistentes de Feedback</button>
+                    <button class="q-option" onclick="answerQ('s3',3,'c',this)">C) Auxiliares de Decisão + Normas Consistentes de Feedback</button>
                     <button class="q-option" onclick="answerQ('s3',3,'d',this)">D) Reduzir Conjuntos de Escolha</button>
                 </div>
                 <div class="q-feedback" id="s3-fb3"></div>
@@ -521,7 +535,7 @@
                 <div class="q-text">Por que a intervenção de Tatiana foi mais eficaz do que a inação de Henrique?</div>
                 <div class="q-options">
                     <button class="q-option" onclick="answerQ('s3',4,'a',this)">A) Tatiana tem mais autoridade formal do que Henrique</button>
-                    <button class="q-option" onclick="answerQ('s3',4,'b',this)">B) Tatiana mudou a estrutura de como sugestões são avaliadas — tornando o viés organizacionalmente mais difícil de exercer, não apenas pedindo comportamento diferente</button>
+                    <button class="q-option" onclick="answerQ('s3',4,'b',this)">B) Tatiana mudou a estrutura de como sugestões são avaliadas</button>
                     <button class="q-option" onclick="answerQ('s3',4,'c',this)">C) Tatiana ameaçou demitir Marcos se o comportamento continuasse</button>
                     <button class="q-option" onclick="answerQ('s3',4,'d',this)">D) Tatiana substituiu Lara por alguém mais experiente</button>
                 </div>
@@ -608,12 +622,13 @@
                 </div>
                 <div class="cert-wrap" id="cert-wrap">
                     <div class="cert-logo">
-                        <svg width="48" height="48" viewBox="0 0 40 40" fill="none">
-                            <path d="M8 28 L20 12 L32 28" fill="none" stroke="#002610" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 28 L20 16 L28 28" fill="none" stroke="#002610" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.16 114.38" height="48" style="display:block;margin:0 auto;">
+                            <path fill="#4DF600" d="M80.95,49.16c13.59,12.49,27.32,24.83,41.01,37.21,1.71-2.52,3.25-5.17,4.59-7.93-13.23-12.52-26.84-24.66-40.54-36.67-11.31-9.92-21.92-9.62-33.1.41-13.3,11.93-26.23,24.3-39.81,35.89,1.34,2.82,2.89,5.52,4.62,8.09,13.73-12.39,27.46-24.78,41.13-37.24,7.59-6.92,14.41-6.83,22.12.25Z"/>
+                            <path fill="#4DF600" d="M56.92,20.51c8.24-4.87,16.3-5.35,24.64-.48,12.87,7.52,25.76,15,38.67,22.46,4.05,2.34,8.15,4.59,12.57,7.06-.09-3.94-.55-7.79-1.33-11.52-.69-.56-31.47-18.24-45.95-26.61-9.9-5.72-20.15-6.3-30.13-.8-14.57,8.03-46.01,26.35-47,27.22-.8,3.73-1.27,7.59-1.37,11.53.28-.12.54-.24.79-.38,16.39-9.47,32.83-18.86,49.13-28.49Z"/>
+                            <path fill="#4DF600" d="M81.84,70.14c-6.01-8.23-19.13-8.13-24.57.09-7.27,10.97-14.02,22.3-21.15,33.89,2.58,1.64,5.28,3.1,8.09,4.36,1.2-1.51,14.61-23.59,19.71-31.88,3.28-5.34,8.32-5.41,11.49-.17,5.3,8.75,18.72,30.78,19.74,32.23,2.83-1.24,5.55-2.69,8.15-4.32-1.85-3.03-3.69-6.06-5.56-9.05-5.24-8.42-10.06-17.16-15.89-25.15Z"/>
                         </svg>
                     </div>
-                    <div class="cert-brand">Travsia Facilitation Practice</div>
+                    <div class="cert-brand">Travsia Facilitação e Desenvolvimento</div>
                     <div class="cert-title">Certificado de Conclusão</div>
                     <div class="cert-recipient-label">Este certificado reconhece que</div>
                     <div class="cert-recipient" id="cert-name-display">__________________________</div>
@@ -631,7 +646,7 @@
                         </span>
                     </div>
                     <div style="width: 120px; height: 1px; background: var(--deep-green); margin: 0 auto 12px;"></div>
-                    <div class="cert-footer">Travsia Facilitation Practice · Formação em Liderança Consciente</div>
+                    <div class="cert-footer">Travsia Facilitação e Desenvolvimento · Formação em Liderança Consciente</div>
                 </div>
                 <div class="cert-actions">
                     <button class="cert-btn cert-btn-primary" onclick="downloadCertificate()">⬇ Baixar Certificado PDF</button>
@@ -791,7 +806,7 @@
             setTimeout(() => {
                 document.getElementById(scenario + '-q' + qNum).style.display = 'none';
                 document.getElementById(scenario + '-q' + nextQ).style.display = 'block';
-            }, 1800);
+            }, 3500);
         } else {
             // All 5 answered — unlock next screen
             screenRequirements[currentScreen] = true;
@@ -941,7 +956,7 @@
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(11);
             doc.setTextColor(0, 122, 64);
-            doc.text('TRAVSIA FACILITATION PRACTICE', w / 2, 38, { align: 'center' });
+            doc.text('TRAVSIA FACILITAÇÃO E DESENVOLVIMENTO', w / 2, 38, { align: 'center' });
 
             // Title
             doc.setFont('helvetica', 'normal');
@@ -998,7 +1013,7 @@
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(9);
             doc.setTextColor(140, 140, 140);
-            doc.text('Travsia Facilitation Practice · Formação em Liderança Consciente', w / 2, 155, { align: 'center' });
+            doc.text('Travsia Facilitação e Desenvolvimento · Formação em Liderança Consciente', w / 2, 155, { align: 'center' });
 
             // Green bottom accent
             doc.setFillColor(77, 246, 0);

@@ -290,9 +290,10 @@
     <!-- Top Bar -->
     <div id="top-bar">
         <div class="top-bar-left" onclick="goHome()">
-            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                <path d="M8 28 L20 12 L32 28" fill="none" stroke="#4DF600" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 28 L20 16 L28 28" fill="none" stroke="#4DF600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.16 114.38" height="28" style="flex-shrink:0;">
+                <path fill="#4DF600" d="M80.95,49.16c13.59,12.49,27.32,24.83,41.01,37.21,1.71-2.52,3.25-5.17,4.59-7.93-13.23-12.52-26.84-24.66-40.54-36.67-11.31-9.92-21.92-9.62-33.1.41-13.3,11.93-26.23,24.3-39.81,35.89,1.34,2.82,2.89,5.52,4.62,8.09,13.73-12.39,27.46-24.78,41.13-37.24,7.59-6.92,14.41-6.83,22.12.25Z"/>
+                <path fill="#4DF600" d="M56.92,20.51c8.24-4.87,16.3-5.35,24.64-.48,12.87,7.52,25.76,15,38.67,22.46,4.05,2.34,8.15,4.59,12.57,7.06-.09-3.94-.55-7.79-1.33-11.52-.69-.56-31.47-18.24-45.95-26.61-9.9-5.72-20.15-6.3-30.13-.8-14.57,8.03-46.01,26.35-47,27.22-.8,3.73-1.27,7.59-1.37,11.53.28-.12.54-.24.79-.38,16.39-9.47,32.83-18.86,49.13-28.49Z"/>
+                <path fill="#4DF600" d="M81.84,70.14c-6.01-8.23-19.13-8.13-24.57.09-7.27,10.97-14.02,22.3-21.15,33.89,2.58,1.64,5.28,3.1,8.09,4.36,1.2-1.51,14.61-23.59,19.71-31.88,3.28-5.34,8.32-5.41,11.49-.17,5.3,8.75,18.72,30.78,19.74,32.23,2.83-1.24,5.55-2.69,8.15-4.32-1.85-3.03-3.69-6.06-5.56-9.05-5.24-8.42-10.06-17.16-15.89-25.15Z"/>
             </svg>
             Sem Pontos Cegos
         </div>
@@ -352,7 +353,7 @@
                 </div>
                 <div class="objective-card">
                     <div class="objective-number">03</div>
-                    <div class="objective-text">Construir um plano de ação pessoal para liderança consciente de vieses</div>
+                    <div class="objective-text">Construir um plano de ação pessoal para liderança consciente</div>
                 </div>
                 <div class="objective-card">
                     <div class="objective-number">04</div>
@@ -624,7 +625,7 @@
                     <p style="font-size: 13px; color: #333; line-height: 1.6; margin-bottom: 10px;"><strong>Cenário:</strong> Seleção para gerente de operações em empresa de manufatura.</p>
                     <p style="font-size: 13px; color: #555; line-height: 1.6;">O primeiro candidato entrevistado tem presença forte, foi à mesma universidade que o CEO e conta histórias impressionantes de resultados. Nos dias seguintes, todos os outros candidatos são inconscientemente comparados a ele. Uma candidata com histórico mais consistente e referências excelentes parece "sem carisma" em comparação. O candidato original é selecionado.</p>
                     <div style="margin-top: 12px; padding: 10px; background: #fff5f5; border-radius: 6px; font-size: 12px; color: #c0392b;">
-                        <strong>Vieses presentes:</strong> Efeito Halo, Viés de Afinidade, Ancoragem, Viés de Recência invertido
+                        <strong>Vieses presentes:</strong> Efeito Halo, Viés de Afinidade, Ancoragem
                     </div>
                 </div>
                 <div class="repair-workspace">
@@ -741,6 +742,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 16px;">
                 <button class="diary-dl-btn" onclick="downloadActionPlan()">⬇ Baixar Modelo do Plano de Ação</button>
+                <a href="assets/diario-de-aprendizagem.pdf" target="_blank" style="background: #002610; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-block;">📓 Diário de Aprendizagem Completo</a>
             </div>
             <div class="diary-checkbox-row">
                 <input type="checkbox" id="plan-check" onchange="planChecked()">
@@ -885,7 +887,7 @@
             <div class="cta-block">
                 <h3>Próximo passo: Avaliação Final</h3>
                 <p>Aplique tudo que aprendeu nos cinco módulos em três cenários reais de liderança. Nota de aprovação: 70% (11/15).</p>
-                <a href="avaliacao-final.html">Iniciar Avaliação Final →</a>
+                <a href="avaliacao-final.html" onclick="try{localStorage.setItem('spc_m5_complete','true');}catch(e){}">Iniciar Avaliação Final →</a>
             </div>
         </div>
 
@@ -988,6 +990,7 @@
             currentScreen++;
             showScreen(currentScreen);
         } else {
+            try { localStorage.setItem('spc_m5_complete', 'true'); } catch(e) {}
             window.location.href = 'avaliacao-final.html';
         }
     }
@@ -1064,6 +1067,17 @@
     }
 
     function showRepairResult(screenIdx) {
+        // Hide all selected strategy buttons so result takes focus
+        const grid = document.getElementById('repair' + screenIdx + '-grid');
+        if (grid) {
+            grid.querySelectorAll('.repair-strategy-btn').forEach(btn => {
+                btn.style.display = 'none';
+            });
+        }
+        // Also hide the "Ver Processo Reparado" button itself
+        const repairBtn = document.getElementById('repair' + screenIdx + '-btn');
+        if (repairBtn) repairBtn.style.display = 'none';
+
         document.getElementById('repair' + screenIdx + '-result').classList.add('show');
         screenRequirements[screenIdx] = true;
         updateNextButton();
@@ -1136,7 +1150,6 @@
         const checked = document.getElementById('plan-check').checked;
         if (checked) {
             document.getElementById('plan-affirm').style.display = 'block';
-            screenRequirements[11] = false; // diary is optional for advance
         }
     }
 

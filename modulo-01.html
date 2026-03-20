@@ -3499,8 +3499,13 @@
 
         // Download Workbook (M1-12)
         function downloadWorkbook() {
-            // Placeholder - would be a real PDF download
-            alert('O diário de aprendizagem será disponibilizado em breve como PDF.');
+            const a = document.createElement('a');
+            a.href = 'assets/diario-de-aprendizagem.pdf';
+            a.download = 'Diario-de-Aprendizagem-Sem-Pontos-Cegos.pdf';
+            a.target = '_blank';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
 
         function checkReflectionComplete() {
